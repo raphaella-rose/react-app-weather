@@ -1,11 +1,19 @@
 import React from "react";
 import Sun from "../images/sun.png";
+import "../styles/SearchEngine.css";
 
-import "../styles/CurrentDisplay.css";
-
-export default function CurrentDisplay() {
+export default function SearchEngine() {
   return (
-    <div class="CurrentDisplay">
+    <div className="SearchEngine">
+    <form>
+      <input
+        className="search"
+        type="text"
+        placeholder="Enter a city..."
+        autoComplete="off"
+      />
+      <input className="go-button" type="submit" value="Go" />
+    </form>
       <h1>London</h1>
       <div className="row">
         <div className="col-6">
@@ -23,6 +31,5 @@ export default function CurrentDisplay() {
           <small className="unit-selector celcius">°C</small>
         </div>
       </div>
-    </div>
-  );
+    </div>);
 }

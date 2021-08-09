@@ -6,7 +6,7 @@ export default function Footer() {
     <div className="sign-off">
       <a
         className="code-link"
-        href="https://github.com/raphaella-rose/vanilla-weather-app"
+        href="https://github.com/raphaella-rose/react-app-weather"
       >
         Open-source code
       </a>
