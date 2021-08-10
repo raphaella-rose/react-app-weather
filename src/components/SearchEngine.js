@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
 import "../styles/SearchEngine.css";
 
 export default function SearchEngine(props) {
 const [weatherData, setWeatherData] = useState({ ready: false });
 function handleResponse(response) {
-console.log(response.data)
   setWeatherData({   
       ready: true,
       Temperature: response.data.main.temp,
-      Date: "Monday 11:00",
+      Date: new Date(response.data.dt * 1000),
       Description: response.data.weather[0].description,
       Humidity: response.data.main.humidity,
       Wind: response.data.wind.speed,
@@ -18,8 +18,6 @@ console.log(response.data)
       Name: response.data.name,
       Icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`})
 
-
-  
 }
 
 if (weatherData.ready) {
@@ -38,7 +36,7 @@ if (weatherData.ready) {
       <div className="row">
         <div className="col-6">
           <ul className="current-details">
-            <li className="todays-date">{weatherData.Date}</li>
+            <li className="todays-date"><FormattedDate date={weatherData.Date} /></li>
             <li className="weather-description">{weatherData.Description}</li>
             <li className="high-low-temp">High: {Math.round(weatherData.High)}° Low: {Math.round(weatherData.Low)}°</li>
             <li className="windspeed">Windspeed: {Math.round(weatherData.Wind)} km/h</li>
