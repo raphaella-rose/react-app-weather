@@ -21,76 +21,42 @@
   color: #00adb5;
   font-family: "Poppins", sans-serif;
   font-size: 45px;
-  margin-top: 20px;
+  margin-top: 5px;
   margin-bottom: 15px;
   max-width: 300px;
 }
-.current-details {
-  font-family: "Poppins", sans-serif;
-  font-size: 15px;
-  font-weight: 100;
-  line-height: 19px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-li::first-letter {
-  text-transform: capitalize;
-}
-.todays-date {
-  color: #eeeeee;
-}
-.weather-description {
-  color: #00adb5;
-}
-.high-low-temp {
-  color: #00adb5;
-}
-.windspeed {
-  color: #00adb5;
-}
-.humidity {
-  color: #00adb5;
-}
-.current-weather {
-  text-align: right;
-}
-.pic {
-  float: left;
-  position: relative;
-  bottom: 10px;
-  left: 10px;
-  width: 75px;
-}
-.current-temperature {
-  color: #00adb5;
-  font-family: "Poppins", sans-serif;
-  font-size: 60px;
-  line-height: 50px;
-}
-.celcius {
+
+.rest {
+  background: #303841;
+  border: solid 1px #303841;
+  border-radius: 15%;
   color: #00adb5;
   float: right;
   font-family: "Poppins", sans-serif;
-  font-size: 15px;
+  font-size: 13px;
+  text-decoration: none;
+  padding: 2px 3px;
+  position: relative;
+  left: 23px;
+  top: 105px;
 }
-.weather-forecast {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  line-height: 50px;
-  list-style: none;
-  margin-top: 40px;
-  padding: 0;
-  text-align: left;
-}
-.day {
-  color: #eeeeee;
-  font-size: 25px;
-}
-.forecast-temp {
+.units:hover {
+  background: #303841;
+  border: solid 1px #303841;
   color: #00adb5;
-  font-size: 17px;
 }
-.icon {
-  font-size: 40px;
+
+.active {
+  background: #00adb5;
+  border: solid 1px #303841;
+  border-radius: 15%;
+  color: #eeeeee;
+  float: right;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  text-decoration: none;
+  padding: 2px 3px;
+  top: 100px;
+  left: 3px;
+  position: relative;
 }

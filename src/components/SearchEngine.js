@@ -4,6 +4,7 @@ import CurrentInfo from "./CurrentInfo";
 import "../styles/SearchEngine.css";
 
 export default function SearchEngine(props) {
+const [units, setUnits] = useState("metric");
 const [city, setCity] = useState(props.defaultCity);
 const [weatherData, setWeatherData] = useState({ ready: false });
 function handleResponse(response) {
@@ -23,10 +24,9 @@ function handleResponse(response) {
 
 function search() {
  let apiKey = "e99a6b83a02b9bd00c5d8a973f6c63e0"; 
- let units = "metric";
  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}&appid=${apiKey}`;
  axios.get(apiUrl).then(handleResponse);
-  return "loading..."
+ return "loading..."
 }
 
 function handleSubmit(event) {
@@ -38,6 +38,14 @@ function handleCityChange(event) {
 setCity(event.target.value)
 }
 
+function showFarenheit() {
+setUnits("imperial");
+search();
+}
+function showCelsius() {
+setUnits("metric");
+search();
+}
 if (weatherData.ready) {
   return (
     <div className="SearchEngine">
@@ -51,6 +59,11 @@ if (weatherData.ready) {
       />
       <input className="go-button" type="submit" value="Go" />
     </form>
+    <div className="unit-selector">
+    <a href="#" className="active"  onClick={showCelsius}>°C</a>
+    <br />
+    <a href="#" className="rest" onClick={showFarenheit}>°F</a>
+    </div>
     <CurrentInfo data={weatherData} />
     </div>);
 } else {

@@ -1,5 +1,6 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
+import "../styles/CurrentInfo.css";
 
 export default function CurrentInfo(props) {
 return (
@@ -18,7 +19,6 @@ return (
         <div className="col-6 current-weather">
           <img className="pic" alt={props.data.Description} src={props.data.Icon} />
           <strong className="current-temperature">{Math.round(props.data.Temperature)}</strong>
-          <small className="unit-selector celcius">°C</small>
         </div>
       </div>
       </div>
