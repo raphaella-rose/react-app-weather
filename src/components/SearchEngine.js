@@ -60,9 +60,9 @@ if (weatherData.ready) {
       <input className="go-button" type="submit" value="Go" />
     </form>
     <div className="unit-selector">
-    <a href="#" className="active"  onClick={showCelsius}>°C</a>
+    <button className={units === "metric" ? "active" : "rest"}  onClick={showCelsius}>°C</button>
     <br />
-    <a href="#" className="rest" onClick={showFarenheit}>°F</a>
+    <button className={units === "imperial"  ? "active" : "rest"} onClick={showFarenheit}>°F</button>
     </div>
     <CurrentInfo data={weatherData} />
     </div>);
