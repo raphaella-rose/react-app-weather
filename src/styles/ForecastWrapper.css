@@ -1,9 +1,22 @@
-.weather-forecast {
+.day {
+  color: #eeeeee;
+  font-size: 25px;
   font-family: "Poppins", sans-serif;
+}
+.forecast-temp {
+  color: #00adb5;
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+}
+.icon {
+  font-size: 40px;
+  font-family: "Poppins", sans-serif;
+}
+.weather-forecast {
   font-weight: 400;
   line-height: 50px;
   list-style: none;
-  margin-top: 40px;
+  margin-top: 0px;
   padding: 0;
   text-align: left;
 }

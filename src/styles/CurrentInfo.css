@@ -27,6 +27,7 @@ li::first-letter {
 }
 .current-weather {
   text-align: right;
+  padding-top: 20px;
 }
 .pic {
   float: left;
@@ -65,8 +66,8 @@ li::first-letter {
 }
 .unit-selector {
   position: relative;
-  bottom: 71px;
-  left: 150px;
+  bottom: 72px;
+  left: 145px;
   width: 30px;
 }
 .rest {

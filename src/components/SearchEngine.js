@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import axios from "axios";
 import CurrentInfo from "./CurrentInfo";
+import ForecastWrapper from "./ForecastWrapper";
 import "../styles/SearchEngine.css";
+
 
 export default function SearchEngine(props) {
 const [city, setCity] = useState(props.defaultCity);
 const [weatherData, setWeatherData] = useState({ ready: false });
+
 function handleResponse(response) {
   setWeatherData({   
       ready: true,
@@ -17,12 +20,13 @@ function handleResponse(response) {
       High: response.data.main.temp_max,
       Low: response.data.main.temp_min,
       Name: response.data.name,
+      Lon: response.data.coord.lon,
+      Lat: response.data.coord.lat,
       Icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`})
-
-}
+    }
 
 function search() {
- let apiKey = "e99a6b83a02b9bd00c5d8a973f6c63e0"; 
+ let apiKey = "c18447d0584798362f0576e1f957d870"; 
  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
  axios.get(apiUrl).then(handleResponse);
  return "loading..."
@@ -51,6 +55,7 @@ if (weatherData.ready) {
       <input className="go-button" type="submit" value="Go" />
     </form>
     <CurrentInfo data={weatherData} />
+    <ForecastWrapper data={weatherData} />
     </div>);
 } else {
   search();

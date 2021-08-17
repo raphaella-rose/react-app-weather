@@ -1,15 +1,29 @@
-import React from "react";
-import Forecast from "../components/Forecast";
-
+import React, { useState } from "react";
+import axios from "axios";
+import Forecast from "./Forecast";
 import "../styles/ForecastWrapper.css";
-export default function ForecastWrapper() {
-  return (
+
+export default function ForecastWrapper(props) {
+const [forecastData, setForecastData] = useState(null)
+const [ready, setReady] = useState(false);
+function handleResponse(response) {
+setForecastData(response.data.daily);
+setReady(true);
+}
+
+if (ready) {
+return (
     <ul className="weather-forecast">
-      <Forecast day="Tuesday" maxTemp={21} minTemp={16} />
-      <Forecast day="Wednesday" maxTemp={23} minTemp={15} />
-      <Forecast day="Thursday" maxTemp={22} minTemp={17} />
-      <Forecast day="Friday" maxTemp={24} minTemp={19} />
-      <Forecast day="Saturday" maxTemp={19} minTemp={13} />
+   <Forecast data={forecastData[0]} />
     </ul>
   );
+} else {
+let lat = (props.data.Lat);
+let lon = (props.data.Lon);
+let apiKey = "c18447d0584798362f0576e1f957d870"; 
+let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+axios.get(apiUrl).then(handleResponse);
+
+ return null;
+}
 }
