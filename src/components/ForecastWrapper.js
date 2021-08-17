@@ -11,10 +11,16 @@ setForecastData(response.data.daily);
 setReady(true);
 }
 
+
 if (ready) {
 return (
     <ul className="weather-forecast">
-   <Forecast data={forecastData[0]} />
+    {forecastData.map(function (dailyForecast, index) {
+      if (index > 0 && index <6) {
+      return (
+      <Forecast key={index} data={dailyForecast} />
+      )
+}})}
     </ul>
   );
 } else {
