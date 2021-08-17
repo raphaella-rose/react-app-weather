@@ -4,7 +4,6 @@ import CurrentInfo from "./CurrentInfo";
 import "../styles/SearchEngine.css";
 
 export default function SearchEngine(props) {
-const [units, setUnits] = useState("metric");
 const [city, setCity] = useState(props.defaultCity);
 const [weatherData, setWeatherData] = useState({ ready: false });
 function handleResponse(response) {
@@ -24,7 +23,7 @@ function handleResponse(response) {
 
 function search() {
  let apiKey = "e99a6b83a02b9bd00c5d8a973f6c63e0"; 
- let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}&appid=${apiKey}`;
+ let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
  axios.get(apiUrl).then(handleResponse);
  return "loading..."
 }
@@ -38,14 +37,6 @@ function handleCityChange(event) {
 setCity(event.target.value)
 }
 
-function showFarenheit() {
-setUnits("imperial");
-search();
-}
-function showCelsius() {
-setUnits("metric");
-search();
-}
 if (weatherData.ready) {
   return (
     <div className="SearchEngine">
@@ -59,11 +50,6 @@ if (weatherData.ready) {
       />
       <input className="go-button" type="submit" value="Go" />
     </form>
-    <div className="unit-selector">
-    <button className={units === "metric" ? "active" : "rest"}  onClick={showCelsius}>°C</button>
-    <br />
-    <button className={units === "imperial"  ? "active" : "rest"} onClick={showFarenheit}>°F</button>
-    </div>
     <CurrentInfo data={weatherData} />
     </div>);
 } else {

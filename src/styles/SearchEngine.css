@@ -21,35 +21,7 @@
   color: #00adb5;
   font-family: "Poppins", sans-serif;
   font-size: 45px;
-  margin-top: 5px;
+  margin-top: 20px;
   margin-bottom: 15px;
   max-width: 300px;
-}
-.unit-selector {
-  position: relative;
-  top: 100px;
-  left: 3px;
-}
-.rest {
-  background: #303841;
-  border: solid 1px #303841;
-  border-radius: 15%;
-  color: #00adb5;
-  float: right;
-  font-family: "Poppins", sans-serif;
-  font-size: 13px;
-  text-decoration: none;
-  padding: 2px 3px;
-}
-
-.active {
-  background: #00adb5;
-  border: solid 1px #303841;
-  border-radius: 15%;
-  color: #eeeeee;
-  float: right;
-  font-family: "Poppins", sans-serif;
-  font-size: 13px;
-  text-decoration: none;
-  padding: 2px 3px;
 }

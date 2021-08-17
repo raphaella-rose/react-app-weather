@@ -63,3 +63,32 @@ li::first-letter {
 .icon {
   font-size: 40px;
 }
+.unit-selector {
+  position: relative;
+  bottom: 71px;
+  left: 150px;
+  width: 30px;
+}
+.rest {
+  background: #303841;
+  border: solid 1px #303841;
+  border-radius: 15%;
+  color: #00adb5;
+  float: right;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  text-decoration: none;
+  padding: 2px 3px;
+}
+
+.active {
+  background: #00adb5;
+  border: solid 1px #303841;
+  border-radius: 15%;
+  color: #eeeeee;
+  float: right;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  text-decoration: none;
+  padding: 2px 3px;
+}
