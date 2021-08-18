@@ -64,32 +64,14 @@ li::first-letter {
 .icon {
   font-size: 40px;
 }
-.unit-selector {
-  position: relative;
-  bottom: 72px;
-  left: 145px;
-  width: 30px;
-}
-.rest {
-  background: #303841;
-  border: solid 1px #303841;
-  border-radius: 15%;
+h1 {
   color: #00adb5;
-  float: right;
   font-family: "Poppins", sans-serif;
-  font-size: 13px;
-  text-decoration: none;
-  padding: 2px 3px;
+  font-size: 45px;
+  margin-top: 0px;
+  margin-bottom: 18px;
+  max-width: 300px;
 }
-
-.active {
-  background: #00adb5;
-  border: solid 1px #303841;
-  border-radius: 15%;
-  color: #eeeeee;
-  float: right;
-  font-family: "Poppins", sans-serif;
-  font-size: 13px;
-  text-decoration: none;
-  padding: 2px 3px;
+.CurrentInfo {
+  margin-top: 0px;
 }

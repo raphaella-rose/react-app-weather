@@ -8,7 +8,7 @@ import "../styles/SearchEngine.css";
 export default function SearchEngine(props) {
 const [city, setCity] = useState(props.defaultCity);
 const [weatherData, setWeatherData] = useState({ ready: false });
-
+const [units, setunits] = useState("metric");
 function handleResponse(response) {
   setWeatherData({   
       ready: true,
@@ -41,6 +41,16 @@ function handleCityChange(event) {
 setCity(event.target.value)
 }
 
+function showFarenheit(event) {
+event.preventDefault();
+setunits("imperial")
+}
+
+function showCelsius(event) {
+event.preventDefault();
+setunits("metric")
+}
+
 if (weatherData.ready) {
   return (
     <div className="SearchEngine">
@@ -54,8 +64,13 @@ if (weatherData.ready) {
       />
       <input className="go-button" type="submit" value="Go" />
     </form>
-    <CurrentInfo data={weatherData} />
-    <ForecastWrapper data={weatherData} />
+    <div className="unit-selector">
+    <button href="#" className={units === "metric" ? "active" : "rest"}  onClick={showCelsius}>°C</button>
+    <br />
+    <button href="#" className={units === "imperial"  ? "active" : "rest"} onClick={showFarenheit}>°F</button>
+    </div>
+    <CurrentInfo data={weatherData} units={units}/>
+    <ForecastWrapper data={weatherData} units={units} />
     </div>);
 } else {
   search();
