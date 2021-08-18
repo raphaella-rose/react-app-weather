@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Forecast from "./Forecast";
 import ForecastImperial from "./ForecastImperial";
@@ -7,6 +7,12 @@ import "../styles/ForecastWrapper.css";
 export default function ForecastWrapper(props) {
 const [forecastData, setForecastData] = useState(null)
 const [ready, setReady] = useState(false);
+
+useEffect(() => {
+ setReady(false);
+}, [props.data])
+
+
 function handleResponse(response) {
 setForecastData(response.data.daily);
 setReady(true);
