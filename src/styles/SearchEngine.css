@@ -47,7 +47,7 @@
   text-decoration: none;
   padding: 2px 3px;
 }
-@media (max-width: 376px) {
+@media (max-width: 381px) {
   .search {
     width: 250px;
   }

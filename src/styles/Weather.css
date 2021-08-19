@@ -6,7 +6,7 @@
   max-width: 400px;
   padding: 20px;
 }
-@media (max-width: 376px) {
+@media (max-width: 381px) {
   .Weather-App {
     max-width: 350px;
   }
