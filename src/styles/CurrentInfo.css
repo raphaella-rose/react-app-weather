@@ -61,9 +61,6 @@ li::first-letter {
   color: #00adb5;
   font-size: 17px;
 }
-.icon {
-  font-size: 40px;
-}
 .cityName {
   color: #00adb5;
   font-family: "Poppins", sans-serif;
@@ -84,6 +81,31 @@ li::first-letter {
   line-height: 25px;
 }
 
-.CurrentInfo {
-  margin-top: 0px;
+@media (max-width: 376px) {
+  .current-temperature {
+    font-size: 50px;
+    position: relative;
+    right: 20px;
+  }
+  .cityName {
+    font-size: 35px;
+  }
+  .reducedCityName {
+    font-size: 25px;
+  }
+  .pic {
+    float: left;
+    position: relative;
+    bottom: 7px;
+    left: 7px;
+    width: 65px;
+  }
+  .current-details {
+    font-size: 12px;
+    line-height: 15px;
+    padding: 0 0 0 2px;
+  }
+  .current-weather {
+    padding-top: 10px;
+  }
 }

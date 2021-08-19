@@ -47,3 +47,14 @@
   text-decoration: none;
   padding: 2px 3px;
 }
+@media (max-width: 376px) {
+  .search {
+    width: 250px;
+  }
+  .unit-selector {
+    position: relative;
+    top: 110px;
+    left: 285px;
+    width: 30px;
+  }
+}
