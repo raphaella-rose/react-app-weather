@@ -81,7 +81,7 @@ li::first-letter {
   line-height: 25px;
 }
 
-@media (max-width: 381px) {
+@media (max-width: 426px) {
   .current-temperature {
     font-size: 50px;
     position: relative;
@@ -99,6 +99,35 @@ li::first-letter {
     bottom: 7px;
     left: 7px;
     width: 65px;
+  }
+  .current-details {
+    font-size: 12px;
+    line-height: 15px;
+    padding: 0 0 0 2px;
+  }
+  .current-weather {
+    padding-top: 10px;
+  }
+}
+@media (max-width: 321px) {
+  .current-temperature {
+    font-size: 40px;
+    position: relative;
+    right: 20px;
+  }
+  .cityName {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  .reducedCityName {
+    font-size: 20px;
+  }
+  .pic {
+    float: left;
+    position: relative;
+    bottom: 7px;
+    left: 7px;
+    width: 60px;
   }
   .current-details {
     font-size: 12px;

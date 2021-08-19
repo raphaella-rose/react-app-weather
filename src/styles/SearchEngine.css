@@ -47,7 +47,7 @@
   text-decoration: none;
   padding: 2px 3px;
 }
-@media (max-width: 381px) {
+@media (max-width: 426px) {
   .search {
     width: 250px;
   }
@@ -55,6 +55,17 @@
     position: relative;
     top: 110px;
     left: 285px;
+    width: 30px;
+  }
+}
+@media (max-width: 321px) {
+  .search {
+    width: 230px;
+  }
+  .unit-selector {
+    position: relative;
+    top: 102px;
+    left: 260px;
     width: 30px;
   }
 }

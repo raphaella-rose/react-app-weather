@@ -22,7 +22,7 @@ function handleResponse(response) {
       Name: response.data.name,
       Lon: response.data.coord.lon,
       Lat: response.data.coord.lat,
-      Icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`})
+      Icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`})
     }
 
 function search() {

@@ -19,11 +19,24 @@
   padding: 0;
   text-align: left;
 }
-@media (max-width: 381px) {
+@media (max-width: 426px) {
   .weather-forecast {
     font-weight: 400;
     line-height: 35px;
     margin-top: 10px;
+  }
+  .day {
+    font-size: 15px;
+  }
+  .forecast-temp {
+    font-size: 13px;
+  }
+}
+@media (max-width: 321px) {
+  .weather-forecast {
+    font-weight: 400;
+    line-height: 35px;
+    margin-top: 15px;
   }
   .day {
     font-size: 15px;
